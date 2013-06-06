@@ -1,0 +1,20 @@
+<html>
+<head>
+	 <title>Christina's ToDo List</title>
+	 <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+
+<h1> Your Tasks </h1>
+
+<% @tasks.each do |task| %>
+	<form method="post" action="/mark_done/<%=task.id%>">
+	 <%=task.name%>
+	 <button class="<%= "green" if task.complete == "t" %>"> Done. </button>  
+	</form>
+<% end %>
+
+<a href="/add_task"> Add Task? </button>
+
+</body>
+</html>

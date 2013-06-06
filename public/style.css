@@ -1,0 +1,7 @@
+button {
+	background:#ddd;
+}
+button.green {
+	background: green; 
+	color: white;
+}
